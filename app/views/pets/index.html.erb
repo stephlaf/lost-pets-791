@@ -1,0 +1,7 @@
+<h1>All our lost pets</h1>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li><strong><%= link_to pet.name.capitalize, pet_path(pet) %></strong> the <%= pet.species %> Found  <%= pet.found_days_ago %> days ago</li>
+  <% end %>
+</ul>

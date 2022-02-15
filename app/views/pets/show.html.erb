@@ -1,0 +1,10 @@
+<h1><%= @pet.name %></h1>
+<h2>the <%= @pet.species %></h2>
+<p>Was found <%= @pet.found_days_ago %> days ago</p>
+<p>near <%= @pet.address %></p>
+
+<%= link_to 'Back to all Pets', pets_path %>
+<%= link_to "Edit #{@pet.name}", edit_pet_path(@pet) %>
+<%= link_to "Delete #{@pet.name}", pet_path(@pet),
+  method: :delete,
+  data: { confirm: 'Wait, WHAT?'} %>
